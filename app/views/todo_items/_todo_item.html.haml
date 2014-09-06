@@ -2,8 +2,8 @@
 - my_id = todo_item.id.to_s ? todo_item.id.to_s : ""
 %li{class: my_class, data: { id: my_id } }
 	.view
-		%input.toggle
+		.toggle
 			- checked = todo_item.completed ? "checked" : ""
 			= check_box_tag("check_box", checked)
-		%label= todo_item.title
-		%button.destroy
+			%label= todo_item.title
+		%button.destroy delete

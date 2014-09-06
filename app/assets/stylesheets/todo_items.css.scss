@@ -7,3 +7,17 @@
 	width: 800px;
 	margin: 20px auto;
 }
+
+ul {
+	list-style-type: none;
+}
+
+.toggle {
+	width: 500px;
+	float: left;
+}
+
+.destroy {
+	content: "delete";
+	padding: 10px 25px;
+}

@@ -1,14 +1,19 @@
 class TodoItemsController < ApplicationController
 	def index
-		logger.debug "Index action ********************"
+		logger.debug "Index action *******************************************"
 		@todo_items = TodoItem.all
 		logger.debug "@todo_items -> #{@todo_items.inspect}"
 	end
 
 	def create 
-		logger.debut "Create action ********************"
+		logger.debug "Create action *******************************************"
 		@todo_item = TodoItem.new todo_params
 		@todo_item.save
+
+		respond_to do |format|
+			format.html { render 'index'}
+			format.js
+		end
 	end
 
 	private
