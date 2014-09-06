@@ -1,7 +1,20 @@
-
+$blue					:#3BA3FF;
 * {
 	font-family: Arial, sans-serif;
 	font-size: 1.2rem;
+}
+
+#new-link {
+	a {
+		color: $blue;
+		text-decoration: none;
+		padding: 10px 25px;
+		border: 3px solid $blue;
+		&:hover {
+			color: white;
+			background: $blue;
+		}
+	}
 }
 .container {
 	width: 800px;
@@ -17,7 +30,11 @@ ul {
 	float: left;
 }
 
-.destroy {
-	content: "delete";
-	padding: 10px 25px;
+.btn {
+	color: $blue;
+}
+
+#todo-list {
+	margin: 40px 0;
+	padding: 0;
 }

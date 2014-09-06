@@ -4,6 +4,9 @@
 			%h1 todos
 			
 			#new-link
+				/ Instead of rendering the new.html.haml, because of remote: true (ajax)
+				/ Link is serviced by new.js.coffee that hides the link and renders the form
+				
 				= link_to "New Task", new_todo_item_path, id: "new_todo_item", remote: true
 
 		%section#main
